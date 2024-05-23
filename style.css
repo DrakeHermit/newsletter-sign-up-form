@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root {
+  --dark-navy: #242742;
+  --gray: #D8D8D8;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +25,7 @@ img {
 .main__card {
   display: flex;
   flex-direction: column-reverse;
+  padding-bottom: 1rem;
 
   h1 {
     font-size: 2.5em;
@@ -41,19 +47,43 @@ img {
 
     &::before {
       content: url(/assets/images/icon-list.svg);
-      padding-right: .7rem;
+      padding-right: 1rem;
       vertical-align: middle;
     }
   }
 
   form {
     display: block;
+    margin-top: 2rem;
+
+    .group-form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 12px;
+        font-weight: 900;
+        margin-bottom: .5rem;
+        color: var(--dark-navy);
+      }
+
+      .email__input {
+        padding: 1.13em;
+        margin-bottom: 1.5rem;
+        border-radius: .4rem;
+        border: 1px solid var(--gray);
+        font-size: 16px;
+      }
+    }
 
     .btn {
       width: 100%;
-      padding: 1.2rem;
+      padding: 1.18rem;
       border-radius: 0.4rem;
       border: none;
+      background-color: var(--dark-navy);
+      color: #fff;
+      font-weight: 900;
     }
   }
 
