@@ -6,6 +6,7 @@
   --gray: #D8D8D8;
   --gradient-0: #FF6A3A;
   --gradient-100: #FF527B;
+  --input-bgcolor: #FFECEA;
 }
 
 * {
@@ -52,6 +53,26 @@ h1 {
   color: var(--dark-navy);
 }
 
+/* Error message styles */
+.error__state {
+  border: 1px solid var(--gradient-0);
+  background-color: var(--input-bgcolor);
+  position: relative;
+  
+  &::placeholder {
+    color: var(--gradient-0);
+  }
+}
+
+p.error__message {
+  color: var(--gradient-0);
+  font-size: 12px;
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+}
+
+/* Mobile styles */
 .main__card {
   display: flex;
   flex-direction: column-reverse;
