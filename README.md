@@ -30,13 +30,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-
+![](./assets/images/desktop-normal.png)
+![](./assets/images/mobile-normal.jpg)
+![](./assets/images/desktop-error-state.png)
+![](./assets/images/mobile-error-state.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [GitHub](https://github.com/DrakeHermit/newsletter-sign-up-forms)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
