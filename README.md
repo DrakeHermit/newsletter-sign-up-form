@@ -38,9 +38,15 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/DrakeHermit/newsletter-sign-up-forms)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://drakeherrmit-newsletter-signup.netlify.app/)
 
 ## My process
+
+1. HTML
+2. CSS (Mobile version)
+3. CSS (Desktop version)
+4. CSS (Error states)
+5. JavaScript form validation
 
 ### Built with
 

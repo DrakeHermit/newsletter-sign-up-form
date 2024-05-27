@@ -57,7 +57,6 @@ h1 {
 .error__state {
   border: 1px solid var(--gradient-0);
   background-color: var(--input-bgcolor);
-  position: relative;
   
   &::placeholder {
     color: var(--gradient-0);
@@ -70,6 +69,7 @@ p.error__message {
   font-weight: 700;
   position: absolute;
   right: 0;
+  top: 0;
 }
 
 /* Mobile styles */
