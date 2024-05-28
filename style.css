@@ -57,6 +57,7 @@ h1 {
 .error__state {
   border: 1px solid var(--gradient-0);
   background-color: var(--input-bgcolor);
+  color: var(--gradient-0);
   
   &::placeholder {
     color: var(--gradient-0);

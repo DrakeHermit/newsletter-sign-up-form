@@ -9,8 +9,13 @@ if (screenWidth >= 760) {
 // General functions
 const createEl = () => {
   const p = document.createElement("p");
-  p.className = "error__message";
-  p.textContent = "Enter a valid email";
+  if (emailInput.value === "") {
+    p.className = "error__message";
+    p.textContent = "This field is required";
+  } else {
+    p.className = "error__message";
+    p.textContent = "Enter a valid email";
+  }
 
   form.appendChild(p);
 
@@ -25,6 +30,7 @@ const isValidEmail = (email) => {
 
 const emailInput = document.getElementById("email");
 const form = document.getElementById("form");
+const mainContent = document.getElementById("main__card");
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -34,7 +40,13 @@ const handleSubmit = (e) => {
   if (!validEmail) {
     emailInput.classList.add("error__state");
     createEl();
+  } else {
+    while (mainContent.firstChild) {
+      mainContent.removeChild(mainContent.firstChild);
+    }
   }
+
+  return emailInput;
 };
 
 form.addEventListener("submit", handleSubmit);
