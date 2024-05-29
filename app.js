@@ -28,6 +28,14 @@ const isValidEmail = (email) => {
   return emailRegex.test(email);
 };
 
+const removeErrorState = () => {
+  setTimeout(() => {
+    form.removeChild(form.children[2]);
+    emailInput.classList.remove("error__state");
+    emailInput.value = "";
+  }, 2000);
+};
+
 const emailInput = document.getElementById("email");
 const form = document.getElementById("form");
 const mainContent = document.getElementById("main__card");
@@ -40,6 +48,7 @@ const handleSubmit = (e) => {
   if (!validEmail) {
     emailInput.classList.add("error__state");
     createEl();
+    removeErrorState();
   } else {
     while (mainContent.firstChild) {
       mainContent.removeChild(mainContent.firstChild);
