@@ -18,7 +18,6 @@ const createEl = () => {
   }
 
   form.appendChild(p);
-
   return p;
 };
 
@@ -36,9 +35,21 @@ const removeErrorState = () => {
   }, 2000);
 };
 
+const openOnSuccess = () => {
+  const div = createEl("div");
+  div.classList.add("main__card");
+  div.innerHTML = `
+    <h1>Hello ${emailInput.value}</h1>
+  `;
+
+  body.appendChild(div);
+  return div;
+};
+
 const emailInput = document.getElementById("email");
 const form = document.getElementById("form");
 const mainContent = document.getElementById("main__card");
+const body = document.getElementById("main");
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -50,9 +61,8 @@ const handleSubmit = (e) => {
     createEl();
     removeErrorState();
   } else {
-    while (mainContent.firstChild) {
-      mainContent.removeChild(mainContent.firstChild);
-    }
+    mainContent.remove();
+    openOnSuccess();
   }
 
   return emailInput;
