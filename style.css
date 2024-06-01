@@ -51,6 +51,9 @@ img {
 
 h1 {
   color: var(--dark-navy);
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 100% ;
 }
 
 /* Error message styles */
@@ -71,6 +74,31 @@ p.error__message {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+/* Success message card */
+.main__card-success {
+  padding: 10rem 1.5rem 2rem 1.5rem;
+  width: 31.5rem;
+  background-color: #fff;
+  border-radius: 2.25rem;
+
+  svg {
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+  }
+
+  p{
+    line-height: 150%;
+  }
+
+  span {
+    font-weight: 900;
+  }
 }
 
 /* Mobile styles */
@@ -128,6 +156,15 @@ p.error__message {
 }
 
 @media (min-width: 780px) {
+  .main__card-success {
+    padding: 4rem;
+
+    h1 {
+      font-size: 56px;
+      margin-bottom: 2rem;
+    }
+  }
+
   body {
     background-color: var(--pale-navy);
     display: flex;
