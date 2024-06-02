@@ -37,10 +37,6 @@ img {
   cursor: pointer;
 }
 
-.btn:hover {
-  background: linear-gradient(var(--gradient-0), var(--gradient-100));
-}
-
 .email__input {
   padding: 1.13em;
   margin-bottom: 1.5rem;
@@ -84,7 +80,7 @@ p.error__message {
   border-radius: 2.25rem;
 
   svg {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   h1 {
@@ -94,6 +90,7 @@ p.error__message {
 
   p{
     line-height: 150%;
+    margin-bottom: 15rem;
   }
 
   span {
@@ -156,12 +153,24 @@ p.error__message {
 }
 
 @media (min-width: 780px) {
+  .btn:hover {
+    background: linear-gradient(var(--gradient-0), var(--gradient-100));
+  }
+
   .main__card-success {
     padding: 4rem;
+
+    svg {
+      margin-bottom: 2rem;
+    }
 
     h1 {
       font-size: 56px;
       margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 2.3rem;
     }
   }
 

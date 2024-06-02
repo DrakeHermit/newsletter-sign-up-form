@@ -42,11 +42,18 @@ const openOnSuccess = () => {
     ${checkMarkSvg}
     <h1>Thanks for subscribing!</h1>
     <p>A confirmation email has been sent to <span>${emailInput.value}.</span> Please open it and click the button inside to confirm your subscription.</p>
-
   `;
 
   mainContent.classList.remove("main__card");
   mainContent.classList.add("main__card-success");
+};
+
+const createBtn = () => {
+  const btn = document.createElement("button");
+  btn.classList.add("btn");
+  btn.textContent = "Dismiss message";
+  mainContent.appendChild(btn);
+  return btn;
 };
 
 const emailInput = document.getElementById("email");
@@ -64,6 +71,7 @@ const handleSubmit = (e) => {
     removeErrorState();
   } else {
     openOnSuccess();
+    createBtn();
   }
 
   return emailInput;
