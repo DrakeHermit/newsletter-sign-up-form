@@ -20,7 +20,6 @@ const createEl = () => {
   }
 
   form.appendChild(p);
-  return p;
 };
 
 const isValidEmail = (email) => {
@@ -34,7 +33,7 @@ const removeErrorState = () => {
     form.removeChild(form.children[2]);
     emailInput.classList.remove("error__state");
     emailInput.value = "";
-  }, 2000);
+  }, 1500);
 };
 
 const openOnSuccess = () => {
@@ -52,13 +51,21 @@ const createBtn = () => {
   const btn = document.createElement("button");
   btn.classList.add("btn");
   btn.textContent = "Dismiss message";
+  btn.id = "redirectedBtn";
   mainContent.appendChild(btn);
-  return btn;
+  const btnExists = document.getElementById("redirectedBtn");
+
+  if (btnExists) {
+    btnExists.addEventListener("click", () => {
+      window.location.reload();
+    });
+  }
 };
 
 const emailInput = document.getElementById("email");
 const form = document.getElementById("form");
 const mainContent = document.getElementById("main__card");
+const originalHTML = mainContent.innerHTML;
 
 const handleSubmit = (e) => {
   e.preventDefault();
