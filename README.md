@@ -58,11 +58,11 @@ Users should be able to:
 
 ### What I learned
 
-
+I learned a ton actually, I finished this challenge once before but I didn't upload it and this time I did it quite differently. I learned adding and removing classes dinamically, changing the structure of html file with innerHTML, which probably wasn't the best decision but I made it work somehow.
 
 ### Continued development
 
-
+I need to keep on improving my JS skills because I don't feel like I understand everything, I still have quite a bit to learn like basic state management with vanilla JS only, then working with JSON file to inject content into HTML dinamically. Also I need to learn to work with arrays and objects because I haven't done much with them as of now. But I already have a structure of what I need to learn/do and working on challenges from JS learning path will guide me along.
 
 ## Author
 
